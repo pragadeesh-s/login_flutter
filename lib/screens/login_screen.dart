@@ -31,7 +31,7 @@ class _LoginScreen extends State<LoginScreen> {
                 'Caring is the new marketing',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 35.0,
                   // fontFamily: 'Inter',
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -43,14 +43,14 @@ class _LoginScreen extends State<LoginScreen> {
                   'Physiological respiration involves the mechanisms that ensure that the compositio',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 13.0,
+                    fontSize: 14.0,
                     // fontFamily: 'Inter',
                     fontWeight: FontWeight.normal,
                     color: Colors.white,
                   ),
                 ),
               ),
-              const SizedBox(height: 300.0),
+              const SizedBox(height: 290.0),
               // const CircleAvatar(
               //   backgroundImage: AssetImage("assets/images/Rectangle_2188.png"),
               //   radius: 80.0,

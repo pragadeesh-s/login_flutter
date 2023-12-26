@@ -10,7 +10,7 @@ void main() {
       theme: ThemeData(
         fontFamily: 'Inter',
       ),
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
         '/': (context) => const SplashScreen(),
         '/login': (context) => const LoginScreen(),
