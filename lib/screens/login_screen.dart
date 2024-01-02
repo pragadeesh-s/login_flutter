@@ -15,6 +15,10 @@ class _LoginScreen extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Add Lead'),
+        centerTitle: false,
+      ),
       body: SafeArea(
         child: Container(
           decoration: const BoxDecoration(

@@ -32,6 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 margin:
                     const EdgeInsets.symmetric(vertical: 20.0, horizontal: 0.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 35.0, horizontal: 35.0),
                 height: 110,
                 width: 110,
                 //color: const Color.fromRGBO(238, 247, 254, 1.0),
@@ -41,12 +43,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     image: AssetImage("assets/images/Rectangle_2188.png"),
                   ),
                 ),
-                foregroundDecoration: const BoxDecoration(
-                  color: Color.fromRGBO(238, 247, 254, 1.0),
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/Add_Friend.png'),
-                  ),
-                ),
+                // foregroundDecoration: const BoxDecoration(
+                //   color: Color.fromRGBO(238, 247, 254, 1.0),
+                //   image: DecorationImage(
+                //     image: AssetImage('assets/images/Rectangle_2188.png'),
+                //   ),
+                // ),
+                child: Image.asset('assets/images/Group 37.png'),
               ),
             ),
             Padding(
@@ -110,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         if (pickedDate != null) {
                           setState(() {
                             startDate = TextEditingController(
-                                text: formatter.format(pickedDate!).toString());
+                                text: formatter.format(pickedDate).toString());
                           });
                         }
                       },
@@ -157,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         if (pickedTime != null) {
                           setState(() {
                             inTime = TextEditingController(
-                              text: pickedTime?.format(context),
+                              text: pickedTime.format(context),
                             );
                           });
                         }
@@ -209,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         if (pickedDate != null) {
                           setState(() {
                             endDate = TextEditingController(
-                                text: formatter.format(pickedDate!).toString());
+                                text: formatter.format(pickedDate).toString());
                           });
                         }
                       },
@@ -256,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         if (pickedTime != null) {
                           setState(() {
                             outTime = TextEditingController(
-                              text: pickedTime?.format(context),
+                              text: pickedTime.format(context),
                             );
                           });
                         }
@@ -289,6 +292,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(40.0, 15.0, 40.0, 0.0),
               child: TextField(
+                keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
                   labelText: 'Phone No',
                   labelStyle: const TextStyle(
@@ -316,6 +320,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(40.0, 15.0, 40.0, 0.0),
               child: TextField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: 'Mail Id',
                   labelStyle: const TextStyle(
@@ -348,7 +353,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   labelStyle: const TextStyle(
                     fontSize: 14,
                   ),
-                  suffixIcon: Icon(Icons.language_sharp),
+                  suffixIcon: const Icon(Icons.language_sharp),
                   suffixIconColor: const Color.fromRGBO(134, 0, 213, 1.0),
                   floatingLabelStyle: const TextStyle(
                     color: Colors.black,
@@ -370,6 +375,9 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(40.0, 15.0, 40.0, 0.0),
               child: TextField(
+                minLines: 1,
+                maxLines: 4,
+                keyboardType: TextInputType.streetAddress,
                 decoration: InputDecoration(
                   labelText: 'Client Address',
                   labelStyle: const TextStyle(

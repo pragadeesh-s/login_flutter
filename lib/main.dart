@@ -7,6 +7,7 @@ import 'screens/home_screen.dart';
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Inter',
       ),
@@ -30,9 +31,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
+    super.initState();
+    // if (ModalRoute.of(context)!.isCurrent) {
     Timer(const Duration(seconds: 3),
         () => Navigator.pushReplacementNamed(context, '/login'));
-    super.initState();
+    // }
   }
 
   @override
